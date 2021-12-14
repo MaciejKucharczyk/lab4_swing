@@ -34,7 +34,6 @@ public class Frame extends JFrame {
         btnReset.setMnemonic(KeyEvent.VK_0);
         add(btnReset);
         btnReset.setBounds(120,5,100,50);
-
         btnCatchMe.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseEntered(MouseEvent e) {
@@ -48,7 +47,7 @@ public class Frame extends JFrame {
                             @Override
                             public void actionPerformed(ActionEvent e) {
                                 btnCatchMe.setLocation(5, 5);
-                                KanwaOn();
+                                KanwaOn(btnCatchMe, btnReset);
 
 
                             }
@@ -68,10 +67,11 @@ public class Frame extends JFrame {
     }
     private void start(){ setVisible(true); }
 
-    public void KanwaOn(){
+    public void KanwaOn(JButton btnCatchMe, JButton btnReset){
         JPanel kanwa = new Kanwa();
+        remove(btnCatchMe);
+        remove(btnReset);
         kanwa.setBounds(10,300,200,200);
-        add(kanwa);
         getContentPane().add(kanwa);
         kanwa.setBackground(Color.darkGray);
         kanwa.setLayout(null);
