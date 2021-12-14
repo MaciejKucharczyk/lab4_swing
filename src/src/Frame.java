@@ -48,8 +48,6 @@ public class Frame extends JFrame {
                             public void actionPerformed(ActionEvent e) {
                                 btnCatchMe.setLocation(5, 5);
                                 KanwaOn(btnCatchMe, btnReset);
-
-
                             }
                         });
                     }
@@ -61,8 +59,6 @@ public class Frame extends JFrame {
                 btnCatchMe.setLocation(5, 5);
             }
         });
-
-
 
     }
     private void start(){ setVisible(true); }
