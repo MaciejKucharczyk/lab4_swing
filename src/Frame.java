@@ -71,7 +71,6 @@ public class Frame extends JFrame {
     public void KanwaOn(){
         JPanel kanwa = new Kanwa();
         kanwa.setBounds(10,300,200,200);
-        add(kanwa);
         getContentPane().add(kanwa);
         kanwa.setBackground(Color.darkGray);
         kanwa.setLayout(null);
