@@ -74,8 +74,8 @@ public class Kanwa extends JPanel implements MouseInputListener {
 
     @Override
     public void mouseMoved(MouseEvent e) {
-      x=e.getX();
-      y=e.getY();
+     // x=e.getX();
+     // y=e.getY();
     }
 
     public void paintComponent(Graphics graphic){

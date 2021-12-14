@@ -3,6 +3,8 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.Random;
 
+import static javax.swing.SwingConstants.WEST;
+
 public class Frame extends JFrame {
 
     public static void main(String[] args){
@@ -46,6 +48,9 @@ public class Frame extends JFrame {
                             @Override
                             public void actionPerformed(ActionEvent e) {
                                 btnCatchMe.setLocation(5, 5);
+                                KanwaOn();
+
+
                             }
                         });
                     }
@@ -59,13 +64,16 @@ public class Frame extends JFrame {
         });
 
 
-        JPanel kanwa = new Kanwa();
-        kanwa.setBounds(10,300,200,200);
-        panel.add(kanwa);
-        getContentPane().add(kanwa);
-        kanwa.setBackground(Color.darkGray);
-        kanwa.setLayout(null);
 
     }
     private void start(){ setVisible(true); }
+
+    public void KanwaOn(){
+        JPanel kanwa = new Kanwa();
+        kanwa.setBounds(10,300,200,200);
+        add(kanwa);
+        getContentPane().add(kanwa);
+        kanwa.setBackground(Color.darkGray);
+        kanwa.setLayout(null);
+    }
 }
