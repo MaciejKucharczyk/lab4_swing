@@ -38,19 +38,19 @@ public class Kanwa extends JPanel implements MouseInputListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        x=e.getX();
-        y=e.getY();
+        this.x=e.getX();
+        this.y=e.getY();
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
-        //x=e.getX();
-        //y=e.getY();
+       // x=e.getX();
+       // y=e.getY();
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        //x=e.getX();
+       // x=e.getX();
         //y=e.getY();
     }
 
@@ -74,22 +74,19 @@ public class Kanwa extends JPanel implements MouseInputListener {
 
     @Override
     public void mouseMoved(MouseEvent e) {
-      //x=e.getX();
-      //y=e.getY();
+      x=e.getX();
+      y=e.getY();
     }
 
     public void paintComponent(Graphics graphic){
         super.paintComponent(graphic);
         Graphics2D graphic2D = (Graphics2D) graphic;
         if(key=='k'){
-            System.out.println("Dziala kwadart");
             graphic.setColor(Color.RED);
             graphic2D.drawRect(x,y,30,30);
             graphic2D.fillRect(x,y,30,30);
-            System.out.println(x); System.out.println(y);
         }
         if(key=='o'){
-            System.out.println("Dziala okrag");
             graphic.setColor(Color.GREEN);
             graphic2D.drawOval(x,y,30,30);
             graphic2D.fillOval(x,y,30,30);

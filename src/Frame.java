@@ -20,22 +20,18 @@ public class Frame extends JFrame {
         setSize(500, 500);
 
         JPanel panel = new JPanel();
-        panel.setBounds(0, 200, 500, 500);
-        setLayout(new FlowLayout());
-
-        JPanel kanwa = new Kanwa();
-        kanwa.setBounds(60,40,150,150);
-        //panel.add(kanwa);
-        getContentPane().add(kanwa);
-        kanwa.setLayout(new FlowLayout());
+        panel.setBounds(0, 0, 1000, 1000);
+        setLayout(null);
 
         JButton btnCatchMe = new JButton("Catch me!");
-        //btnCatchMe.setMnemonic(KeyEvent.VK_0);
+        btnCatchMe.setMnemonic(KeyEvent.VK_0);
         add(btnCatchMe);
+        btnCatchMe.setBounds(5,5,100,50);
 
         JButton btnReset = new JButton("Reset");
-        //btnReset.setMnemonic(KeyEvent.VK_0);
+        btnReset.setMnemonic(KeyEvent.VK_0);
         add(btnReset);
+        btnReset.setBounds(120,5,100,50);
 
         btnCatchMe.addMouseListener(new MouseAdapter() {
                 @Override
@@ -49,9 +45,7 @@ public class Frame extends JFrame {
                         btnCatchMe.addActionListener(new ActionListener() {
                             @Override
                             public void actionPerformed(ActionEvent e) {
-                                btnCatchMe.setLocation(btnReset.getX()-95, 5);
-                                //kanwa.requestFocus(true);
-                               // System.out.println(btnCatchMe.getX());
+                                btnCatchMe.setLocation(5, 5);
                             }
                         });
                     }
@@ -60,9 +54,17 @@ public class Frame extends JFrame {
         btnReset.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                btnCatchMe.setLocation(btnReset.getX()-95, 5);
+                btnCatchMe.setLocation(5, 5);
             }
         });
+
+
+        JPanel kanwa = new Kanwa();
+        kanwa.setBounds(10,300,200,200);
+        panel.add(kanwa);
+        getContentPane().add(kanwa);
+        kanwa.setBackground(Color.darkGray);
+        kanwa.setLayout(null);
 
     }
     private void start(){ setVisible(true); }
