@@ -38,8 +38,8 @@ public class Kanwa extends JPanel implements MouseInputListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        //x=e.getX();
-        //y=e.getY();
+        x=e.getX();
+        y=e.getY();
     }
 
     @Override
@@ -68,8 +68,8 @@ public class Kanwa extends JPanel implements MouseInputListener {
 
     @Override
     public void mouseDragged(MouseEvent e) {
-        x=e.getX();
-        y=e.getY();
+       // x=e.getX();
+        //y=e.getY();
     }
 
     @Override
